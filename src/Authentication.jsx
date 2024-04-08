@@ -1,19 +1,24 @@
 import React, { createContext, useEffect, useState } from 'react';
 import auth from "./Firebase.init";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, signInWithPopup } from 'firebase/auth';
+import { set } from 'firebase/database';
 
 export const AuthContext = createContext(null)
+
 
 const Authentication = ({children}) => {
 
     const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
 
     // create User 
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
     // Login existing User 
     const loginUser = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
     // Logout existing User
@@ -22,11 +27,9 @@ const Authentication = ({children}) => {
     }
     // Login with GitHub
     const loginWithGithub = (provider) => {
+        setLoading(true)
         return signInWithPopup(auth, provider)
     }
-
-    // sending info through context 
-    const userInfo = {createUser, loginUser, logOut, loginWithGithub, user}
 
     // get Currently user loged in 
     useEffect(() => {
@@ -34,14 +37,19 @@ const Authentication = ({children}) => {
             if(currentUser){
                 console.log(currentUser)
                 setUser(currentUser)
+                setLoading(false)
             } else {
                 setUser(currentUser) 
+                setLoading(false)
             }
         })
         return () => {
             unSubscribe()
         }
     },[])
+
+     // sending info through context 
+     const userInfo = {createUser, loginUser, logOut, loginWithGithub, user, loading}
 
     return (
         <>

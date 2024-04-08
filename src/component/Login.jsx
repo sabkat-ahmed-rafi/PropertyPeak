@@ -11,7 +11,7 @@ import { GithubAuthProvider } from "firebase/auth";
 
 const Login = () => {
 
-  const {loginUser} = useContext(AuthContext)
+  const {loginUser, loginWithGithub, loading} = useContext(AuthContext)
   const navigate = useNavigate()
 
   const handleLogin = (e) => {
@@ -45,6 +45,8 @@ const Login = () => {
 
   return (
     <>
+    {/* loading spinner */}
+    {loading && <span className="loading loading-spinner loading-lg text-primary sticky top-[300px] left-[650px] z-10"></span>}
       <section className="mx-24 px-16 mt-2">
         <div className="hero  bg-base-200 rounded-3xl">
           <div className="hero-content flex-col lg:flex-row-reverse">

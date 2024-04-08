@@ -20,8 +20,8 @@ const Navbar = () => {
 
   return (
     <>
-      <section className="mt-2">
-        <div className="navbar bg-base-100">
+      <section className="mt-2 sticky top-0 z-40">
+        <div className="navbar bg-base-100 shadow-md">
           <div className="flex-1">
             <a className="btn btn-ghost font-bold text-3xl">ProPertyPeak</a>
           </div>
