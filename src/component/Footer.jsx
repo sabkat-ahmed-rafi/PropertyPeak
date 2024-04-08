@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <section className="mt-10">
-        <footer className="footer p-10 rounded-t-3xl bg-slate-900 text-white font-bold">
+      <section className="mt-10 ">
+        <footer className="footer p-10 rounded-t-3xl bg-slate-900 text-white font-bold ">
           <nav>
             <h6 className="footer-title">Services</h6>
             <a className="link link-hover">Rental Services</a>

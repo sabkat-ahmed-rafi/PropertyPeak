@@ -8,7 +8,8 @@ import UserProfile from "./component/UserProfile";
 import UpdateProfile from "./component/UpdateProfile";
 import Register from "./component/Register";
 import Login from "./component/Login";
-
+import Authentication from "./Authentication";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Authentication>
+      <RouterProvider router={router} />
+      <Toaster />
+    </Authentication>
   </React.StrictMode>
 );

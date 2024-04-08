@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Authentication";
+import toast from 'react-hot-toast';
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+    
+    const {createUser} = useContext(AuthContext)
+    const navigate = useNavigate()
+
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value
@@ -9,7 +16,24 @@ const Register = () => {
     const photo = e.target.photo.value
     const password = e.target.password.value
 
+    // Validation for password 
+    if(!/[A-Z]/.test(password)) {
+       return toast.error('Password must have an Uppercase letter.');
+    } else if(!/[a-z]/.test(password)) {
+        return toast.error('Password must have a Lowercase letter.')
+    } else if(!password.length >= 6) {
+        return toast.error('Password must be at least 6 characters.')
+    }
+
     // create user 
+    createUser(email, password)
+    .then(userCredential => {
+        const user = userCredential.user
+        toast.success("You have successfully created an account.")
+        navigate('/login')
+    }).catch(error => {
+        toast.error(error.message)
+    })
 
   };
 
@@ -83,6 +107,7 @@ const Register = () => {
                     <p>Already have an account ?  <Link className="ml-2 text-blue-800" to="/login">Login</Link></p>
                 </div>
               </form>
+
             </div>
           </div>
         </div>
