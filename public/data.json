@@ -1,0 +1,111 @@
+[
+    {
+      "relevant_image": "https://source.unsplash.com/featured/?house",
+      "estate_title": "Luxurious Villa with Panoramic Views",
+      "id": 1,
+      "segment_name": "Premium",
+      "description": "A stunning villa offering breathtaking views of the mountains, featuring modern architecture and high-end finishes.",
+      "price": "$1,500,000",
+      "status": "Sale",
+      "area": "3500 sq ft",
+      "location": "Beverly Hills, California",
+      "facilities": ["Living Room", "Swimming Pool", "Kitchen"]
+    },
+    {
+      "relevant_image": "https://source.unsplash.com/featured/?apartment",
+      "estate_title": "Cozy Apartment in Downtown",
+      "id": 2,
+      "segment_name": "Standard",
+      "description": "A charming apartment situated in the heart of the city, perfect for urban living with convenient access to amenities.",
+      "price": "$1,200/month",
+      "status": "Rent",
+      "area": "800 sq ft",
+      "location": "Downtown Manhattan, New York",
+      "facilities": ["Living Room", "Kitchen"]
+    },
+    {
+      "relevant_image": "https://source.unsplash.com/featured/?beach-house",
+      "estate_title": "Seaside Retreat",
+      "id": 3,
+      "segment_name": "Premium",
+      "description": "A luxurious beachfront property offering unparalleled ocean views and elegant coastal living.",
+      "price": "$3,200,000",
+      "status": "Sale",
+      "area": "5000 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["Living Room", "Swimming Pool", "Kitchen", "Private Beach Access"]
+    },
+    {
+      "relevant_image": "https://source.unsplash.com/featured/?modern-loft",
+      "estate_title": "Modern Loft in the Arts District",
+      "id": 4,
+      "segment_name": "Luxury",
+      "description": "A sleek loft space nestled in the vibrant arts district, featuring industrial-chic design and ample natural light.",
+      "price": "$2,800,000",
+      "status": "Sale",
+      "area": "2800 sq ft",
+      "location": "Downtown Los Angeles, California",
+      "facilities": ["Living Room", "Kitchen", "Gym"]
+    },
+    {
+      "relevant_image": "https://source.unsplash.com/featured/?family-home",
+      "estate_title": "Spacious Family Home in Suburbs",
+      "id": 5,
+      "segment_name": "Standard",
+      "description": "A comfortable family home located in a peaceful suburban neighborhood, perfect for raising children.",
+      "price": "$750,000",
+      "status": "Sale",
+      "area": "3200 sq ft",
+      "location": "Suburban Atlanta, Georgia",
+      "facilities": ["Living Room", "Kitchen", "Backyard"]
+    },
+    {
+      "relevant_image": "https://source.unsplash.com/featured/?ski-chalet",
+      "estate_title": "Ski-in/Ski-out Chalet",
+      "id": 6,
+      "segment_name": "Premium",
+      "description": "A luxurious chalet situated right on the slopes, offering convenient ski-in/ski-out access and stunning mountain views.",
+      "price": "$2,500,000",
+      "status": "Sale",
+      "area": "4000 sq ft",
+      "location": "Aspen, Colorado",
+      "facilities": ["Living Room", "Kitchen", "Ski Room"]
+    },
+    {
+      "relevant_image": "https://source.unsplash.com/featured/?penthouse",
+      "estate_title": "Urban Penthouse with City Views",
+      "id": 7,
+      "segment_name": "Luxury",
+      "description": "An exquisite penthouse offering panoramic city views, luxurious amenities, and refined urban living.",
+      "price": "$4,500,000",
+      "status": "Sale",
+      "area": "6000 sq ft",
+      "location": "Midtown Manhattan, New York",
+      "facilities": ["Living Room", "Kitchen", "Gym", "Terrace"]
+    },
+    {
+      "relevant_image": "https://source.unsplash.com/featured/?mansion",
+      "estate_title": "Historic Mansion with Landscaped Gardens",
+      "id": 8,
+      "segment_name": "Luxury",
+      "description": "A grand historic mansion set amidst beautifully landscaped gardens, offering timeless elegance and sophistication.",
+      "price": "$6,000,000",
+      "status": "Sale",
+      "area": "8000 sq ft",
+      "location": "Charleston, South Carolina",
+      "facilities": ["Living Room", "Kitchen", "Library", "Pool House"]
+    },
+    {
+      "relevant_image": "https://source.unsplash.com/featured/?cottage",
+      "estate_title": "Riverside Cottage with Private Dock",
+      "id": 9,
+      "segment_name": "Standard",
+      "description": "A charming riverside cottage featuring a private dock, ideal for fishing, boating, and enjoying tranquil river views.",
+      "price": "$450,000",
+      "status": "Sale",
+      "area": "2000 sq ft",
+      "location": "Savannah, Georgia",
+      "facilities": ["Living Room", "Kitchen", "Deck"]
+    }
+  ]
+  
