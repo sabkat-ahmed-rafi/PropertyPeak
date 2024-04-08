@@ -39,7 +39,7 @@ const Register = () => {
 
   return (
     <>
-      <section  className="mx-24 px-16 mt-0">
+      <section  className="mx-24 px-16 mt-3">
         <div className="hero bg-base-200 rounded-3xl">
           <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

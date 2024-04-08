@@ -1,50 +1,59 @@
 import React from "react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const Slider = () => {
   return (
     <>
-      <section className="mt-5 mx-[100px]">
-        <div className="carousel w-full rounded-2xl">
-          <div id="slide1" className="carousel-item relative w-full">
-            <img src="/house1.jpg" className="w-full h-[450px]" />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide4" className="btn btn-circle">
-                ❮
-              </a>
-              <a href="#slide2" className="btn btn-circle">
-                ❯
-              </a>
+      <section className="mx-[80px] mt-8">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper rounded-lg"
+        >
+          <SwiperSlide>
+            <div className="mx-auto ">
+              <img className="h-[500px] w-full" src="/house1.jpg" alt="" />
             </div>
-          </div>
-          <div id="slide2" className="carousel-item relative w-full">
-            <img
-              src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
-              className="w-full"
-            />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide1" className="btn btn-circle">
-                ❮
-              </a>
-              <a href="#slide3" className="btn btn-circle">
-                ❯
-              </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div>
+              <img className="h-[500px] w-full" src="/house2.webp" alt="" />
             </div>
-          </div>
-          <div id="slide3" className="carousel-item relative w-full">
-            <img
-              src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
-              className="w-full"
-            />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide2" className="btn btn-circle">
-                ❮
-              </a>
-              <a href="#slide4" className="btn btn-circle">
-                ❯
-              </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div>
+              <img className="h-[500px] w-full" src="/house3.jpg" alt="" />
             </div>
-          </div>
-        </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div>
+              <img className="h-[500px] w-full" src="/house4.jpg" alt="" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div>
+              <img className="h-[500px] w-full" src="/house5.jpg" alt="" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div>
+              <img className="h-[500px] w-full" src="/house6.jpg" alt="" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </section>
     </>
   );
