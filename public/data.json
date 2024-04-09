@@ -1,6 +1,6 @@
 [
     {
-      "relevant_image": "https://source.unsplash.com/featured/?house",
+      "relevant_image": "/house1.jpg",
       "estate_title": "Luxurious Villa with Panoramic Views",
       "id": 1,
       "segment_name": "Premium",
@@ -12,7 +12,7 @@
       "facilities": ["Living Room", "Swimming Pool", "Kitchen"]
     },
     {
-      "relevant_image": "https://source.unsplash.com/featured/?apartment",
+      "relevant_image": "/house2.webp",
       "estate_title": "Cozy Apartment in Downtown",
       "id": 2,
       "segment_name": "Standard",
@@ -24,7 +24,7 @@
       "facilities": ["Living Room", "Kitchen"]
     },
     {
-      "relevant_image": "https://source.unsplash.com/featured/?beach-house",
+      "relevant_image": "/house3.jpg",
       "estate_title": "Seaside Retreat",
       "id": 3,
       "segment_name": "Premium",
@@ -36,7 +36,7 @@
       "facilities": ["Living Room", "Swimming Pool", "Kitchen", "Private Beach Access"]
     },
     {
-      "relevant_image": "https://source.unsplash.com/featured/?modern-loft",
+      "relevant_image": "/house4.jpg",
       "estate_title": "Modern Loft in the Arts District",
       "id": 4,
       "segment_name": "Luxury",
@@ -48,7 +48,7 @@
       "facilities": ["Living Room", "Kitchen", "Gym"]
     },
     {
-      "relevant_image": "https://source.unsplash.com/featured/?family-home",
+      "relevant_image": "/house5.jpg",
       "estate_title": "Spacious Family Home in Suburbs",
       "id": 5,
       "segment_name": "Standard",
@@ -60,7 +60,7 @@
       "facilities": ["Living Room", "Kitchen", "Backyard"]
     },
     {
-      "relevant_image": "https://source.unsplash.com/featured/?ski-chalet",
+      "relevant_image": "/house6.jpg",
       "estate_title": "Ski-in/Ski-out Chalet",
       "id": 6,
       "segment_name": "Premium",
@@ -72,7 +72,7 @@
       "facilities": ["Living Room", "Kitchen", "Ski Room"]
     },
     {
-      "relevant_image": "https://source.unsplash.com/featured/?penthouse",
+      "relevant_image": "/house7.jpg",
       "estate_title": "Urban Penthouse with City Views",
       "id": 7,
       "segment_name": "Luxury",
@@ -84,7 +84,7 @@
       "facilities": ["Living Room", "Kitchen", "Gym", "Terrace"]
     },
     {
-      "relevant_image": "https://source.unsplash.com/featured/?mansion",
+      "relevant_image": "/house8.jpg",
       "estate_title": "Historic Mansion with Landscaped Gardens",
       "id": 8,
       "segment_name": "Luxury",
@@ -94,18 +94,6 @@
       "area": "8000 sq ft",
       "location": "Charleston, South Carolina",
       "facilities": ["Living Room", "Kitchen", "Library", "Pool House"]
-    },
-    {
-      "relevant_image": "https://source.unsplash.com/featured/?cottage",
-      "estate_title": "Riverside Cottage with Private Dock",
-      "id": 9,
-      "segment_name": "Standard",
-      "description": "A charming riverside cottage featuring a private dock, ideal for fishing, boating, and enjoying tranquil river views.",
-      "price": "$450,000",
-      "status": "Sale",
-      "area": "2000 sq ft",
-      "location": "Savannah, Georgia",
-      "facilities": ["Living Room", "Kitchen", "Deck"]
     }
   ]
   

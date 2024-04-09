@@ -9,14 +9,17 @@ import UpdateProfile from "./component/UpdateProfile";
 import Register from "./component/Register";
 import Login from "./component/Login";
 import Authentication from "./Authentication";
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
+import HouseDetails from "./component/HouseDetails";
+import Error from "./component/Error";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children: ([
+    children: [
       {
         path: "/",
         element: <Home></Home>,
@@ -36,8 +39,19 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
-      }
-    ])
+      },
+      {
+        path: "/house/:id",
+        loader: async ({params}) => {
+          const response = await fetch('/data.json')
+          const data = await response.json();
+          const clickedHouse = parseInt(params.id)
+          return data.find(singleData => singleData.id === clickedHouse) || null
+        },
+        element: <PrivateRoute><HouseDetails></HouseDetails></PrivateRoute>,
+      },
+    ],
+    errorElement: <Error></Error>
   },
 ]);
 

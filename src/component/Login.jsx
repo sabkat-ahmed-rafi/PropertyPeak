@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../Authentication";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import toast from 'react-hot-toast';
 import { GithubAuthProvider } from "firebase/auth";
 
@@ -13,6 +13,9 @@ const Login = () => {
 
   const {loginUser, loginWithGithub, loading} = useContext(AuthContext)
   const navigate = useNavigate()
+  const location = useLocation()
+  const previousRoute = location?.state || '/';
+  console.log(previousRoute);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -24,7 +27,7 @@ const Login = () => {
     loginUser(email, password)
     .then(userCredential => {
       toast.success('You have successfully logged in.');
-      navigate('/')
+      navigate(previousRoute)
 
     }).catch(error => {
       toast.success(error.message);
@@ -37,7 +40,7 @@ const Login = () => {
     loginWithGithub(githubProvider)
     .then(userCredential => {
       toast.success('You have successfully logged in.');
-      navigate('/')
+      navigate(previousRoute)
     }).catch(error => {
       toast.success(error.message);
     })
