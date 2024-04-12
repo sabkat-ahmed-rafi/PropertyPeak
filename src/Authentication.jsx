@@ -35,7 +35,6 @@ const Authentication = ({children}) => {
     useEffect(() => {
        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
             if(currentUser){
-                console.log(currentUser)
                 setUser(currentUser)
                 setLoading(false)
             } else {

@@ -39,6 +39,11 @@ const Navbar = () => {
                     User Update
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink className="changeActiveRoute" to="/contact">
+                    Contact Us
+                  </NavLink>
+                </li>
               </ul>
             </div>
             {/* user  */}

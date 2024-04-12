@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 const HouseDetails = () => {
   const house = useLoaderData();
   const {
@@ -18,6 +18,9 @@ const HouseDetails = () => {
 
   return (
     <>
+        <Helmet>
+        <title>House Details</title>
+      </Helmet>
       <section className="text-center text-3xl font-bold my-14">
         Proverty Details
       </section>

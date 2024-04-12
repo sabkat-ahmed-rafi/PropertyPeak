@@ -1,19 +1,17 @@
-import React, { useContext } from "react";
-import { AuthContext } from "../Authentication";
-import { Helmet } from "react-helmet-async";
+import React, { useContext } from 'react';
+import { AuthContext } from '../Authentication';
+import { Helmet } from 'react-helmet-async';
 
+const Contact = () => {
 
-const UpdateProfile = () => {
+    const {user} = useContext(AuthContext)
 
-  const {user} = useContext(AuthContext)
-
-
-  return (
-    <>
-    <Helmet>
-        <title>Update Profile</title>
-      </Helmet>
-      <section className="mt-10">
+    return (
+        <div>
+            <Helmet>
+                <title>Contact us</title>
+            </Helmet>
+            <section className="mt-10">
         <form
           noValidate=""
           action=""
@@ -21,10 +19,14 @@ const UpdateProfile = () => {
         >
           <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-slate-200">
             <div className="space-y-4 col-span-full lg:col-span-1">
-              <p className="font-medium text-2xl">Personal Inormation</p>
-              <p className="text-xs font-semibold">
-                You can update your personal information through the following settings. Feel happy to use our service.
+              <p className="font-medium text-3xl">Contact Us</p>
+              <p className="text-lg font-semibold">
+                You can us through the following information.
               </p>
+              <div className='font-bold '>Address : Dhaka, Bangladesh</div>
+              <div className='font-bold '>Phone : +880 172 123 456</div>
+              <div className='font-bold '>Email : sabkatahmedrafi@gmail.com</div>
+              <div className='font-bold '>Owner : Sabkat Ahmed Rafi</div>
               <div>
                 <img className="rounded" src={user? user.photoURL: ''} alt="" />
               </div>
@@ -110,12 +112,12 @@ const UpdateProfile = () => {
             </div>
           </fieldset>
           <div>
-            <button className="btn btn-success">Submit</button>
+            <button className="btn btn-primary">Submit</button>
           </div>
         </form>
       </section>
-    </>
-  );
+        </div>
+    );
 };
 
-export default UpdateProfile;
+export default Contact;

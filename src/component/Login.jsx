@@ -6,7 +6,7 @@ import { AuthContext } from "../Authentication";
 import { useNavigate, useLocation } from "react-router-dom";
 import toast from 'react-hot-toast';
 import { GithubAuthProvider } from "firebase/auth";
-
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -15,7 +15,6 @@ const Login = () => {
   const navigate = useNavigate()
   const location = useLocation()
   const previousRoute = location?.state || '/';
-  console.log(previousRoute);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -48,6 +47,9 @@ const Login = () => {
 
   return (
     <>
+    <Helmet>
+        <title>Login</title>
+      </Helmet>
     {/* loading spinner */}
     {loading && <span className="loading loading-spinner loading-lg text-primary sticky top-[300px] left-[650px] z-10"></span>}
       <section className="mx-24 px-16 mt-2">
