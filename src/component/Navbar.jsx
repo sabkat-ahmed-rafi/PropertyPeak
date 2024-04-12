@@ -35,14 +35,14 @@ const Navbar = () => {
                 </li>
 
                 <li>
-                  <NavLink className="changeActiveRoute" to="/updateProfile">
+                  {user && <NavLink className="changeActiveRoute" to="/updateProfile">
                     User Update
-                  </NavLink>
+                  </NavLink>}
                 </li>
                 <li>
-                  <NavLink className="changeActiveRoute" to="/contact">
+                  {user && <NavLink className="changeActiveRoute" to="/contact">
                     Contact Us
-                  </NavLink>
+                  </NavLink>}
                 </li>
               </ul>
             </div>
