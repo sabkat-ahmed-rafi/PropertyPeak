@@ -9,7 +9,7 @@ const House = ({ house }) => {
 
   return (
     <>
-      <section data-aos="slide-left" className="flex flex-col flex-grow mt-10 w-[40%] border-4 p-6 space-y-3">
+      <section data-aos="slide-right" className="flex flex-col flex-grow mt-10 w-[32%] border-4 p-6 space-y-3">
         <div>
           <img src={relevant_image} alt="house" className="" />
         </div>
