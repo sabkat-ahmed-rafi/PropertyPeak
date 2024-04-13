@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const House = ({ house }) => {
   const { relevant_image, estate_title, segment_name, description, price, status, area, location, facilities, id } = house;
 
   return (
     <>
-      <section className="flex flex-col flex-grow mt-10 w-[40%] border-4 p-6 space-y-3">
+      <section data-aos="slide-left" className="flex flex-col flex-grow mt-10 w-[40%] border-4 p-6 space-y-3">
         <div>
           <img src={relevant_image} alt="house" className="" />
         </div>

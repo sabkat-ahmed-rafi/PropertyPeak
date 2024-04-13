@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import House from "./House";
+import 'animate.css';
 
 const Houses = () => {
 
@@ -21,7 +22,7 @@ const Houses = () => {
   return (
     <>
     <section className="flex flex-col items-center justify-center mt-10 space-y-3">
-      <h1 className="text-4xl font-bold text-slate-900">Estate</h1>
+      <h1 className="text-4xl font-bold text-slate-900 animate__animated animate__rubberBand animate__repeat-2">Estate</h1>
       <p className="text-slate-700 text-center">Discover an array of residential properties that cater to your lifestyle preferences. <br /> From cozy apartments in vibrant city centers to sprawling suburban homes nestled amidst nature.</p>
     </section>
       <section className="flex flex-wrap mx-6 gap-16 justify-center">

@@ -21,7 +21,7 @@ const HouseDetails = () => {
         <Helmet>
         <title>House Details</title>
       </Helmet>
-      <section className="text-center text-3xl font-bold my-14">
+      <section className="text-center text-3xl font-bold my-14 animate__animated animate__rubberBand">
         Proverty Details
       </section>
       <section className="mt-10 mx-12">
